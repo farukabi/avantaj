@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avantaj AVM</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="img/logo.jpeg" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkRvovSlTM6WplkTRJu2FOKKgo-TDM9ED0sw&s">
+
+</head>
+<body style="background-color: #DC143C	 " >
+    <div class="menubar">
+        <a href="#home" onclick="resetView()">
+            <i class="fas fa-home"></i>
+            <span>Ana Sayfa</span>
+        </a>
+        <a href="#services" onclick="toggleCategories()">
+            <i class="fas fa-shopping-basket"></i>
+            <span>Ürünler</span>
+        </a>
+        <a href="#about" onclick="showHakkimizda()">
+            <i class="fas fa-info-circle"></i>
+            <span>Hakkımızda</span>
+        </a>
+        <a href="#contact" onclick="iconClicked()">
+            <i class="fas fa-envelope"></i>
+            <span>İletişim</span>
+        </a>
+    </div>
+    
+    <div class="hero-section" id="main_image">
+        <h1>Avantaj AVM'ye Hoşgeldiniz!</h1>
+        <p>En iyi ürünler, en uygun fiyatlarla!</p>
+        <a href="#services" class="cta-button" onclick="toggleCategories()">Ürünlerimize Göz Atın</a>
+    </div>
+    <div class="brands-section" id="brand">
+        <h2>Markalar</h2>
+        <div class="brands-container">
+            <img src="https://egeservisizmir.com/resimler/Markalar/Buyuk/Altus/Altus_Logo.png" alt="Altus Logo">
+            <img src="https://i.pinimg.com/originals/24/28/6e/24286efae6a34c2c5ed9ff7d40c4a017.png" alt="Beko Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Ar%C3%A7elik_logo.svg/2560px-Ar%C3%A7elik_logo.svg.png" alt="Arçelik Logo">
+            <img src="data:image/png;base64,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" alt="Vestel Logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/U%C4%9Fur_So%C4%9Futma_logo.svg/2560px-U%C4%9Fur_So%C4%9Futma_logo.svg.png" alt="">
+            <img src="https://egeservisizmir.com/resimler/Markalar/Buyuk/Simfer/Simfer_Buyuk_Logo.png" alt="">
+            <img src="data:image/png;base64,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" alt="">
+            <img src="https://seeklogo.com/images/P/puffy-yatas-logo-BAF7C4834A-seeklogo.com.png" alt="">
+            <img src="https://www.campaigntr.com/wp-content/uploads/2015/04/GoldMaster-Logo.jpg" alt="">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1280px-Samsung_Logo.svg.png" alt="">
+            <img src="https://tokgozticaret.com.tr/image/cache/catalog/Urunler/arnica-600x315w.png" alt="">
+            <img src="https://static.ticimax.cloud/47342/uploads/editoruploads/fmslogo-2.png" alt="">
+        </div>
+    </div>
+    
+    <div id="galleryCarousel" class="carousel slide gallery-section" data-bs-ride="carousel">
+        <h2 style="margin-bottom: 15px;">Mağazalarımız</h2>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPuJhyDxE_1I_cGlZXTyC15VURWdQiy6KkSykta=s680-w680-h510-rw" class="d-block w-100" alt="Mağaza 1">
+            </div>
+            <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipMJ9z4xy1lthcG4TN8D9g5gJy79HgR1fxBS5zdP=s680-w680-h510-rw" class="d-block w-100" alt="Mağaza 2">
+            </div>
+             <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPUOWtLih6SIoetuCA_5shxciqP2Qu2SGY6S86w=s680-w680-h510-rw" class="d-block w-100" alt="Mağaza 4">
+            </div>
+            <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipORrN-VqLlEWKWo38pJ-vi1Ino-zfY6rxpyBrMw=s680-w680-h510-rw" class="d-block w-100" alt="Mağaza 3">
+            </div>
+            <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPvGC4kdfYdky8b3FNx8Z_I-03c7EmugslJDXeN=s680-w680-h510-rw" class="d-block w-100" alt="Mağaza 4">
+            </div>
+            <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipPgfv4lphinRH4J21cakHYiQOGdGTzmnptJKdWF=s680-w680-h510-rw" class="d-block w-100" alt="Mağaza 4">
+            </div>
+            <div class="carousel-item">
+                <img src="img/1.jpeg" class="d-block w-100" alt="Mağaza 4">
+            </div>
+            <div class="carousel-item">
+                <img src="https://lh3.googleusercontent.com/p/AF1QipMSP6iV3poZYOGVLWGVdn3350LMtl8JYdOMcgPj=s680-w680-h510-rw" class="d-block w-100" alt="Mağaza 4">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Önceki</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Sonraki</span>
+        </button>
+    </div>
+    
+    <div class="content-section" id="home">
+        <h2>Şubelerimiz</h2>
+        <div class="card-container">
+            <div class="branch-card">
+                <div class="card-front">
+                    <img src="https://www.dir.gen.tr/image/187223-0-avantaj-avm.jpg" alt="Bayraklı Şube">
+                    <h3>Bayraklı Şubemiz</h3>
+                </div>
+            </div>
+            <div class="branch-card">
+                <div class="card-front">
+                    <img src="https://avatars.mds.yandex.net/get-altay/10239151/2a0000019171b39473471b31f14e6fcc9161/L_height" alt="Doğanlar Şube">
+                    <h3>Doğanlar Şubemiz</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="branch-info" class="branch-info hidden">
+        <button onclick="closeBranchInfo()">Kapat</button>
+        <h2 id="branch-name"></h2>
+        <p id="branch-description"></p>
+    </div>
+    <div id="contact-info" class="info-box">
+        <h2>İletişim Bilgileri</h2>
+        <p><i class="fas fa-envelope"></i> email: avantaj32@hotmail.com</p>
+        <p><h3>Doğanlar Şube:</h3>1521 sk. No:112 Doğanlar Mh. Bornova/İzmir <br><i class="fas fa-phone-alt"></i> tel: 05368846614</p>
+        <p><h3>Bayraklı Şube:</h3>Sakarya Cad. No:92/A Bayraklı/İzmir <br><i class="fas fa-phone-alt"></i> tel: 05336412030</p>
+        <button class="contactBtn" onclick="closeInfoBox()">Kapat</button>
+    </div>    
+    <div id="categories-bar" class="categories hidden">
+        <button class="closeBtn" onclick="closeCategories()"><i class="fas fa-angle-double-left" ></i></button>
+        <h2>Kategoriler</h2>
+        <ul>
+            <li onclick="showSubcategories()">Beyaz Eşya</li>
+            <li onclick="showMobilya()">Mobilya</li>
+            <li>Tekstil</li>
+            <li>Küçük Ev Aletleri</li>
+            <li>Züccaciye</li>
+            <li>Elektronik</li>
+        </ul>
+    </div>
+    <div id="subcategories-bar" class="subcategories hidden">
+        <h2>Beyaz Eşya</h2>
+        <button class="closeBtn" onclick="closeSubcategories()"><i class="fas fa-angle-double-left" ></i></button>
+        <ul>
+            <li onclick="showBuzdolabi()">Buzdolabı</li>
+            <li onclick="showCamasir()">Çamaşır Makinesi</li>
+            <li onclick="showBulasik()">Bulaşık Makinesi</li>
+            <li onclick="showKurutma()">Kurutma Makinesi</li>
+        </ul>
+    </div>       
+    <div id="buzdolabi" class="buzdolabi" >
+        <div  class="buzdolabi_cards" >
+            <img class="buzdolabi_image" src="https://hesaplioutlet.com/wp-content/uploads/2024/05/ZFWXNIUDGK10222018183330_474-nixx.png" alt="">
+            <h3>ALTUS AL470 BUZDOLABI </h3>
+        </div>
+        <div  style="margin-left: 15px;" class="buzdolabi_cards">
+            <img class="buzdolabi_image" src="https://altusyetkilibayi.com/image/cache/catalog/Altus-yeni-buzdolabi/AL%20375%20YEN%C4%B0-800x1280.jpeg" alt="">
+            <h3>ALTUS AL375 BUZDOLABI</h3>
+        </div>
+        <div  style="margin-left: 15px;" class="buzdolabi_cards">
+            <img class="buzdolabi_image" src="https://www.altus.com.tr/content/dam/Altus-tr-aem/Altus-tr-aemProductCatalog/product-images/7293223210-AL-370/7293223210-LO1-20210505-214342.png" alt="">
+            <h3>ALTUS AL370 BUZDOLABI</h3>
+        </div>
+    </div>
+    <div id="camasir" class="camasir" >
+        <div  class="camasir_cards" style="width: 350px;">
+            <img class="camasir_image" src="https://cdn.akakce.com/altus/altus-al-9103-md-9-kg-1000-devir-z.jpg" alt="">
+            <h3 style="text-align: center;">ALTUS AL10123 D 10 Kg Çamaşır Makinesi </h3>
+        </div>
+        <div  style="margin-left: 15px; width: 350px;" class="camasir_cards" >
+            <img class="camasir_image" src="https://cdn.akakce.com/altus/altus-al-9103-md-9-kg-1000-devir-z.jpg" alt="">
+            <h3 style="text-align: center;">ALTUS AL9103 MD 9 Kg Çamaşır Makinesi</h3>
+        </div>
+        <div  style="margin-left: 15px; width: 350px;" class="camasir_cards" >
+            <img class="camasir_image" src="https://cdn.akakce.com/altus/altus-al-9103-md-9-kg-1000-devir-z.jpg" alt="">
+            <h3 style="text-align: center;">ALTUS AL8103 MD 8 Kg Çamaşır Makinesi</h3>
+        </div>
+        <div  style="margin-left: 15px; width: 350px;" class="camasir_cards" >
+            <img class="camasir_image" src="https://cdn.akakce.com/altus/altus-al-9103-md-9-kg-1000-devir-z.jpg" alt="">
+            <h3 style="text-align: center;">ALTUS AL7103 L 7 Kg Çamaşır Makinesi</h3>
+        </div>
+        <div  style="margin-left: 15px; width: 350px;" class="camasir_cards" >
+            <img class="camasir_image" src="https://cdn.akakce.com/altus/altus-al-9103-md-9-kg-1000-devir-z.jpg" alt="">
+            <h3 style="text-align: center;">ALTUS AL6103 L 6 Kg Çamaşır Makinesi</h3>
+        </div>
+    </div>
+    <div id="bulasik" class="bulasik">
+        <div class="bulasik_cards">
+            <img class="bulasik_image" src="https://cdn.akakce.com/altus/altus-al-413-a-3-programli-z.jpg" alt="">
+            <h3>Altus AL 413 3 Program Bulaşık Makinesi</h3>
+        </div>
+        <div class="bulasik_cards">
+            <img class="bulasik_image" src="https://cdn.akakce.com/altus/altus-al-434-4-programli-bulasik-makinasi-z.jpg" alt="">
+            <h3>Altus AL 434 4 Program Bulaşık Makinesi</h3>
+        </div>
+        <div class="bulasik_cards">
+            <img class="bulasik_image" src="https://m.media-amazon.com/images/I/41XWKtEJTGL._AC_UF1000,1000_QL80_.jpg" alt="">
+            <h3>Altus AL 445 NX 5 Program Bulaşık Makinesi</h3>
+        </div>
+    </div>
+    <div id="kurutma" class="kurutma">
+        <div class="kurutma_cards">
+            <img class="kurutma_image"  src="https://cdn.akakce.com/z/altus/altus-al-101-ic-10-kg.jpg" alt="">
+            <h3>Altus AL 101 IC 10 Kg Kurutma Makinesi</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="https://cdn.akakce.com/z/altus/altus-al-101-ic-10-kg.jpg" alt="">
+            <h3>Altus AL 91 YB 9 Kg Kurutma Makinesi</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="https://cdn.akakce.com/z/altus/altus-al-81-ic-8kg-a-kurutma-makinesi.jpg" alt="">
+            <h3>Altus AL 81 IC 8 Kg Kurutma Makinesi</h3>
+        </div>
+    </div>
+    <div id="subcategories-bar-mobilya" class="subcategories hidden">
+        <h2>Mobilya</h2>
+        <button class="closeBtn" onclick="closeMobilya()"><i class="fas fa-angle-double-left" ></i></button>
+        <ul>
+            <li onclick="showMobilyaResim()">Koltuk Takımı</li>
+            <li onclick="showYatakResim()">Yatak-Baza-Başlık</li>
+            <li onclick="showDolapResim()">Dolap</li>
+        </ul>
+    </div>
+    <div id="galleryMobilya" class="carousel slide gallery-section-mobilya">
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/mobilya1.jpg" alt="">
+            <h3>Koltuk Takımı 1</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/mobilya2.jpg" alt="">
+            <h3>Koltuk Takımı 2</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/mobilya3.jpg" alt="">
+            <h3>Koltuk Takımı 3</h3>
+        </div>
+    </div>
+    <div id="galleryYatak" class="carousel slide gallery-section-yatak">
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/yatak1.jpg" alt="">
+            <h3>Yatak Takımı 1</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/yatak2.jpg" alt="">
+            <h3>Yatak Takımı 2</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/yatak3.jpg" alt="">
+            <h3>Yatak Takımı 3</h3>
+        </div>
+    </div>
+    <div id="galleryDolap" class="carousel slide gallery-section-dolap">
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/dolap1.jpg" alt="">
+            <h3>Dolap 1</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/dolap2.jpg" alt="">
+            <h3>Dolap 2</h3>
+        </div>
+        <div class="kurutma_cards">
+            <img class="kurutma_image" src="img/dolap3.jpg" alt="">
+            <h3>Dolap 3</h3>
+        </div>
+    </div>
+       
+    <div id="hakkimizda" class="hakkimizdaCls">
+        <h2>Hakkımızda</h2>
+        <p>
+            Kurulduğumuz günden beri ürün yelpazemizi genişletmek ve müşterilerimizin daha iyi deneyimler elde etmesini sağlamak için var gücümüzle çalışıyoruz.
+        </p>
+        <p>
+            Katettiğimiz gelişimle gurur duyuyoruz ancak daha da iyi bir alışveriş deneyimi sunmak için bundan fazlasını yapmaya kararlıyız.
+        </p>
+        <ul>
+            <li>Kaliteli ürün seçenekleri</li>
+            <li>Hızlı teslimat imkanları</li>
+            <li>Güvenilir müşteri hizmetleri</li>
+        </ul>
+        <p>
+            Daima yeniliklere açık yaklaşımımız sayesinde değişen trendlere ve beklentilere kolayca uyum sağlıyoruz. Siz değerli müşterilerimizin memnuniyeti, mağazamızın bugünlere gelmesindeki en büyük ilham kaynağıdır.
+        </p>
+    </div>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
