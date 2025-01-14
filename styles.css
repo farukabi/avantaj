@@ -356,29 +356,24 @@ body {
 .gallery-section-mobilya {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f9f9f9;
     flex-wrap: wrap;
     gap: 40px;
     display: none;
-    background-color: #e74c3c;
 }
 .gallery-section-yatak {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f9f9f9;
     flex-wrap: wrap;
     gap: 40px;
     display: none;
-    background-color: #e74c3c;
+    
 }
 .gallery-section-dolap {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f9f9f9;
     flex-wrap: wrap;
     gap: 40px;
     display: none;
-    background-color: #e74c3c;
 }
 .card-container {
     display: flex;
