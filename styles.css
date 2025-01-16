@@ -218,6 +218,7 @@ body {
     text-align: center; 
 }
 .hero-section {
+    
     text-align: center;
     background: linear-gradient(to right, #4facfe, #00f2fe);
     color: white;
@@ -233,6 +234,7 @@ body {
 .hero-section p {
     font-size: 1.2rem; 
     margin-bottom: 20px;
+    color: red;
 }
 
 .hero-section .cta-button {
@@ -427,8 +429,6 @@ body {
     scrollbar-color: #888 #f1f1f1;
     margin-left: 15px;
 }
-
-/* Kaydırma çubuğu özelleştirmesi (Chrome, Edge, Safari) */
 .brands-container::-webkit-scrollbar {
     height: 6px;
 }
