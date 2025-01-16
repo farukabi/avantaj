@@ -217,6 +217,43 @@ body {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
     text-align: center; 
 }
+.features-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Küçük ekranlarda satır kayması */
+    gap: 15px; /* Öğeler arasında boşluk */
+    margin-top: 20px;
+}
+
+.features-container h3 {
+    background-color: #DC143C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-container h3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobil uyumlu düzen */
+@media (max-width: 768px) {
+    .features-container {
+        flex-direction: column; /* Dikey hizalama */
+    }
+
+    .features-container h3 {
+        width: 80%; /* Mobilde genişliği artır */
+    }
+}
+
 .hero-section {
     
     text-align: center;
