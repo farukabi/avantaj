@@ -365,7 +365,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .buzdolabi_cards, .camasir_cards, .bulasik_card,.gallery-section-yatak {
+    .buzdolabi_cards, .camasir_cards, .bulasik_cards,.gallery-section-yatak {
         flex: 1 1 100%; 
         max-width: 100%;
     }
