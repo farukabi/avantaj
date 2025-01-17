@@ -493,29 +493,42 @@ body {
     transform: scale(1.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-/* Mobil cihazlar için görsel boyutunu küçültme */
 @media (max-width: 768px) {
     .brands-container img {
-        width: 100px; /* Küçük ekranlarda logo boyutu küçülür */
+        width: 100px; 
     }
 
     .brands-container {
-        gap: 15px; /* Mobilde logolar arasındaki boşluk azalır */
+        gap: 15px; 
+    }
+    .color-options {
+        gap: 15px;
+    }
+
+    .color-circle {
+        width: 25px;
+        height: 25px;
     }
 }
 
-/* Daha küçük ekranlar (telefonlar) için */
 @media (max-width: 480px) {
     .brands-container img {
-        width: 80px; /* Çok küçük ekranlarda daha küçük logo */
+        width: 80px;
     }
 
     .brands-container {
         gap: 10px;
     }
+    .color-options {
+        gap: 20px;
+    }
+
+    .color-circle {
+        width: 30px;
+        height: 30px;
+    }
 }
-/* Renk Seçenekleri Başlığı */
+
 .color-title {
     font-size: 1rem;
     font-weight: bold;
@@ -526,11 +539,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Renk Seçenekleri Yuvarlakları */
+
 .color-options {
     display: flex;
-    justify-content: center; /* Ortalamak için */
-    gap: 10px; /* Yuvarlaklar arasındaki boşluk */
+    justify-content: center; 
+    gap: 10px; 
     margin-top: 5px;
 }
 
