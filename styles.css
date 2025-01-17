@@ -398,6 +398,7 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     display: none;
+    justify-content: center;
 }
 .gallery-section-yatak {
     text-align: center;
@@ -405,6 +406,7 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     display: none;
+    justify-content: center;
     
 }
 .gallery-section-dolap {
@@ -413,6 +415,7 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     display: none;
+    justify-content: center;
 }
 .card-container {
     display: flex;
