@@ -107,7 +107,7 @@ function resetView(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showBulasik(){
-    bulasikMak.style.display = "flex";
+    bulasikMak.style.display = "block";
     categoriesBar.classList.add('hidden');
     subcategoriesBar.classList.add('hidden');
     mainImage.classList.add('hidden');
