@@ -515,3 +515,48 @@ body {
         gap: 10px;
     }
 }
+/* Renk Seçenekleri Başlığı */
+.color-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Renk Seçenekleri Yuvarlakları */
+.color-options {
+    display: flex;
+    justify-content: center; /* Ortalamak için */
+    gap: 10px; /* Yuvarlaklar arasındaki boşluk */
+    margin-top: 5px;
+}
+
+.color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.color-circle:hover {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.color-circle.white {
+    background-color: white;
+    border: 2px solid #ccc;
+}
+
+.color-circle.gray {
+    background-color: gray;
+}
+
+.color-circle.silver {
+    background-color: silver;
+}
