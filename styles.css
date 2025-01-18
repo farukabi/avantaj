@@ -271,16 +271,16 @@ body {
 .hero-section p {
     font-size: 1.2rem; 
     margin-bottom: 20px;
-    color: red;
+    color: black;
 }
 
 .hero-section .cta-button {
     padding: 10px 20px; 
-    font-size: 0.9rem; 
+    font-size: 1.2rem; 
     background-color: white;
     border-radius: 20px;
     text-decoration: none;
-    color: #c0392b;
+    color: red;
 }
 .content-section {
     padding: 15px 20px; 
@@ -572,4 +572,32 @@ body {
 
 .color-circle.silver {
     background-color: silver;
+}
+.mobilya_cards {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    padding: 20px;
+    width: 350px;
+    max-width: 350px;
+    margin-top: 55px;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+}
+
+.mobilya_cards:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.mobilya_image {
+    width: 100%;
+    height: auto; /* Yüksekliği otomatik ayarladım */
+    object-fit: contain; /* Görselin tamamını gösterir */
+    border-bottom: 1px solid #eee;
+    max-width: 300px;
+    margin: 0 auto;
 }
