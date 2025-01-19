@@ -14,6 +14,7 @@ const yatakResim = document.getElementById("galleryYatak");
 const dolapResim = document.getElementById("galleryDolap");
 const info = document.getElementById('contact-info');
 const brands = document.getElementById("brand");
+const koseResim = document.getElementById("galleryMobilyaKose");
 function iconClicked(){
   document.getElementById('contact-info').classList.add('active');
   info.scrollIntoView({ behavior: 'smooth', block: 'end' });
@@ -101,6 +102,7 @@ function resetView(){
     galery.classList.remove('hidden');
     kurutmalik.style.display = "none";
     mobilyaResim.style.display="none";
+    koseResim.style.display = "none";
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.remove("hidden");
@@ -153,6 +155,25 @@ function showMobilyaResim(){
     galery.classList.add('hidden');
     kurutmalik.style.display = "none";
     mobilyaResim.style.display = "flex";
+    yatakResim.style.display = "none";
+    dolapResim.style.display = "none";
+    brands.classList.add("hidden");
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function showMobilyaKoseResim(){
+    bulasikMak.style.display = "none";
+    categoriesBar.classList.add('hidden');
+    subcategoriesBar.classList.add('hidden');
+    subcategoriesBarMobilya.classList.add("hidden");
+    mainImage.classList.add('hidden');
+    subeler.classList.add("hidden");
+    camasirMakineleri.style.display = "none";
+    buzdolabiSection.style.display = 'none'; 
+    hakkimizda.style.display = "none";
+    galery.classList.add('hidden');
+    kurutmalik.style.display = "none";
+    mobilyaResim.style.display = "none";
+    koseResim.style.display = "flex";
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
