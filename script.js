@@ -15,6 +15,7 @@ const dolapResim = document.getElementById("galleryDolap");
 const info = document.getElementById('contact-info');
 const brands = document.getElementById("brand");
 const koseResim = document.getElementById("galleryMobilyaKose");
+const ayakkabilikResim = document.getElementById("galleryAyakkabilik");
 function iconClicked(){
   document.getElementById('contact-info').classList.add('active');
   info.scrollIntoView({ behavior: 'smooth', block: 'end' });
@@ -56,6 +57,7 @@ function showHakkimizda(){
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
     koseResim.style.display = "none";
+    ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
 }
@@ -75,6 +77,7 @@ function showBuzdolabi() {
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
     koseResim.style.display = "none";
+    ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showCamasir(){
@@ -93,6 +96,7 @@ function showCamasir(){
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
     koseResim.style.display = "none";
+    ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function resetView(){
@@ -109,6 +113,7 @@ function resetView(){
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.remove("hidden");
+    ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showBulasik(){
@@ -127,6 +132,7 @@ function showBulasik(){
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
     koseResim.style.display = "none";
+    ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showKurutma(){
@@ -145,6 +151,7 @@ function showKurutma(){
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
     koseResim.style.display = "none";
+    ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showMobilyaResim(){
@@ -164,6 +171,7 @@ function showMobilyaResim(){
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
     koseResim.style.display = "none";
+    ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showMobilyaKoseResim(){
@@ -183,6 +191,7 @@ function showMobilyaKoseResim(){
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
+    ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showYatakResim(){
@@ -202,6 +211,7 @@ function showYatakResim(){
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
     koseResim.style.display = "none";
+    ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showDolapResim(){
@@ -221,5 +231,26 @@ function showDolapResim(){
     dolapResim.style.display = "flex";
     brands.classList.add("hidden");
     koseResim.style.display = "none";
+    ayakkabilikResim.style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function showAyakkabilikResim(){
+    bulasikMak.style.display = "none";
+    categoriesBar.classList.add('hidden');
+    subcategoriesBar.classList.add('hidden');
+    subcategoriesBarMobilya.classList.add("hidden");
+    mainImage.classList.add('hidden');
+    subeler.classList.add("hidden");
+    camasirMakineleri.style.display = "none";
+    buzdolabiSection.style.display = 'none'; 
+    hakkimizda.style.display = "none";
+    galery.classList.add('hidden');
+    kurutmalik.style.display = "none";
+    mobilyaResim.style.display = "none";
+    yatakResim.style.display = "none";
+    dolapResim.style.display = "none";
+    brands.classList.add("hidden");
+    koseResim.style.display = "none";
+    ayakkabilikResim.style.display = "flex";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
