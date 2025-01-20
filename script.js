@@ -55,6 +55,7 @@ function showHakkimizda(){
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
+    koseResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
 }
@@ -73,6 +74,7 @@ function showBuzdolabi() {
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
+    koseResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showCamasir(){
@@ -90,6 +92,7 @@ function showCamasir(){
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
+    koseResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function resetView(){
@@ -123,6 +126,7 @@ function showBulasik(){
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
+    koseResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showKurutma(){
@@ -140,6 +144,7 @@ function showKurutma(){
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
+    koseResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showMobilyaResim(){
@@ -158,6 +163,7 @@ function showMobilyaResim(){
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
+    koseResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showMobilyaKoseResim(){
@@ -195,6 +201,7 @@ function showYatakResim(){
     yatakResim.style.display = "flex";
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
+    koseResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showDolapResim(){
@@ -213,5 +220,6 @@ function showDolapResim(){
     yatakResim.style.display = "none";
     dolapResim.style.display = "flex";
     brands.classList.add("hidden");
+    koseResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
