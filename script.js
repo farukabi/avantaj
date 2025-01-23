@@ -254,3 +254,35 @@ function showAyakkabilikResim(){
     ayakkabilikResim.style.display = "flex";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+document.addEventListener("DOMContentLoaded", function () {
+    const searchBar = document.getElementById("search-bar");
+    const filterCapacity = document.getElementById("filter-capacity");
+    const productCards = document.querySelectorAll(".camasir_cards");
+    const noResult = document.getElementById("no-result");
+
+    function filterProducts() {
+        const searchValue = searchBar.value.toLowerCase();
+        const selectedCapacity = filterCapacity.value;
+        let hasResults = false;
+    
+        productCards.forEach(card => {
+            const productName = card.querySelector("h3").innerText.toLowerCase();
+            const productCapacity = productName.match(/\d+ kg/i)?.[0]?.split(" ")[0];
+    
+            if (
+                (productName.includes(searchValue) || searchValue === "") &&
+                (selectedCapacity === "all" || productCapacity === selectedCapacity)
+            ) {
+                card.style.display = "flex"; /* Görünür kart */
+                hasResults = true;
+            } else {
+                card.style.display = "none"; /* Gizli kart */
+            }
+        });
+    
+        noResult.style.display = hasResults ? "none" : "block";
+    }
+
+    searchBar.addEventListener("input", filterProducts);
+    filterCapacity.addEventListener("change", filterProducts);
+});
