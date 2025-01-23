@@ -510,6 +510,22 @@ body {
         width: 25px;
         height: 25px;
     }
+    .filter-search-container {
+        flex-direction: column; /* Çubuğun dikey hizalanmasını sağlar */
+        padding: 10px;
+        gap: 10px; /* Alanlar arasındaki boşluk */
+        width: 100%; /* Tam genişlik */
+    }
+
+    #search-bar {
+        width: 90%; /* Mobilde genişlik küçültülür */
+        font-size: 1rem; /* Yazı boyutu optimize edilir */
+    }
+
+    #filter-capacity {
+        width: 90%; /* Select kutusu da genişlik olarak ayarlanır */
+        font-size: 1rem; /* Yazı boyutu optimize edilir */
+    }
 }
 
 @media (max-width: 480px) {
