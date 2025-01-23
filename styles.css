@@ -305,6 +305,7 @@ body {
 .buzdolabi_cards, .camasir_cards, .bulasik_cards, .kurutma_cards {
     background: white; 
     border-radius: 15px;
+    flex-direction: column;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     overflow: hidden; 
     transition: transform 0.3s, box-shadow 0.3s; 
@@ -600,4 +601,38 @@ body {
     border-bottom: 1px solid #eee;
     max-width: 300px;
     margin: 0 auto;
+}
+.filter-search-container {
+    position: sticky; /* Arama çubuğunu ekranda sabitler */
+    top: 0; /* Üstte kalmasını sağlar */
+    z-index: 100; /* Kartların ve diğer içeriklerin üstünde gösterir */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 0 auto; /* Merkezler */
+    padding: 10px;
+    background-color: #f9f9f9; /* Sabitlendiğinde arka plan görünür olur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif bir gölge efekti */
+    width: 100%; /* Tam genişlik */
+
+}
+
+#search-bar {
+    padding: 10px;
+    font-size: 1rem;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#filter-capacity {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    cursor: pointer;
 }
