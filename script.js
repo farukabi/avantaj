@@ -20,6 +20,11 @@ const searchBar = document.getElementById("search-bar");
 const filterCapacity = document.getElementById("filter-capacity");
 const productCards = document.querySelectorAll(".camasir_cards");
 const noResult = document.getElementById("no-result");
+const bulasikSearchBar = document.getElementById("bulasik-search-bar");
+const programFilter = document.getElementById("program-filter");
+const bulasikCards = document.querySelectorAll(".bulasik_cards");
+const noResultBulasik = document.getElementById("no-result-bulasik");
+
 function iconClicked(){
   document.getElementById('contact-info').classList.add('active');
   info.scrollIntoView({ behavior: 'smooth', block: 'end' });
@@ -138,7 +143,7 @@ function showBulasik(){
     brands.classList.add("hidden");
     koseResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
-    resetFilters();
+    resetBulasikFilters();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showKurutma(){
@@ -261,38 +266,83 @@ function showAyakkabilikResim(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function filterProducts() {
-    const searchValue = searchBar.value.toLowerCase();
-    const selectedCapacity = filterCapacity.value;
+    const searchValue = searchBar.value.toLowerCase(); 
+    const selectedCapacity = filterCapacity.value; 
     let hasResults = false;
 
     productCards.forEach(card => {
-        const productName = card.querySelector('h3').innerText.toLowerCase();
-        const productCapacity = productName.match(/\d+ kg/i)?.[0]?.split(' ')[0];
+        const productName = card.querySelector("h3").innerText.toLowerCase(); 
+        const productCapacity = card.getAttribute("data-capacity"); 
 
         if (
-            (productName.includes(searchValue) || searchValue === '') &&
-            (selectedCapacity === 'all' || productCapacity === selectedCapacity)
+            (productName.includes(searchValue) || searchValue === "") &&
+            (selectedCapacity === "all" || productCapacity === selectedCapacity)
         ) {
-            card.style.display = 'flex';
+            card.style.display = "flex"; 
             hasResults = true;
         } else {
-            card.style.display = 'none';
+            card.style.display = "none"; 
         }
     });
 
-    noResult.style.display = hasResults ? 'none' : 'block';
+    noResult.style.display = hasResults ? "none" : "block";
 }
 
 function resetFilters() {
-    searchBar.value = '';
-    filterCapacity.value = 'all';
+    searchBar.value = ""; 
+    filterCapacity.value = "all"; 
     productCards.forEach(card => {
-        card.style.display = 'flex';
+        card.style.display = "flex"; 
     });
-    noResult.style.display = 'none';
+    noResult.style.display = "none"; 
 }
 
-// Etkinlik dinleyiciler
-searchBar.addEventListener('input', filterProducts);
-filterCapacity.addEventListener('change', filterProducts);
+
+searchBar.addEventListener("input", filterProducts);
+filterCapacity.addEventListener("change", filterProducts);
+
+
+document.addEventListener("DOMContentLoaded", resetFilters);
+
+function filterBulasikProducts() {
+    const searchValue = bulasikSearchBar.value.toLowerCase(); 
+    const selectedProgram = programFilter.value; 
+    let hasResults = false;
+
+    bulasikCards.forEach(card => {
+        const productName = card.querySelector("h3").innerText.toLowerCase();
+        const productProgram = card.getAttribute("data-program"); 
+
+        
+        if (
+            (productName.includes(searchValue) || searchValue === "") &&
+            (selectedProgram === "all" || productProgram === selectedProgram)
+        ) {
+            card.style.display = "flex"; 
+            hasResults = true;
+        } else {
+            card.style.display = "none"; 
+        }
+    });
+
+    
+    noResultBulasik.style.display = hasResults ? "none" : "block";
+}
+
+
+function resetBulasikFilters() {
+    bulasikSearchBar.value = ""; 
+    programFilter.value = "all"; 
+    bulasikCards.forEach(card => {
+        card.style.display = "flex"; 
+    });
+    noResultBulasik.style.display = "none"; 
+}
+
+bulasikSearchBar.addEventListener("input", filterBulasikProducts);
+programFilter.addEventListener("change", filterBulasikProducts);
+
+document.addEventListener("DOMContentLoaded", resetBulasikFilters);
+
+
 
