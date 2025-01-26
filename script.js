@@ -16,6 +16,10 @@ const info = document.getElementById('contact-info');
 const brands = document.getElementById("brand");
 const koseResim = document.getElementById("galleryMobilyaKose");
 const ayakkabilikResim = document.getElementById("galleryAyakkabilik");
+const searchBar = document.getElementById("search-bar");
+const filterCapacity = document.getElementById("filter-capacity");
+const productCards = document.querySelectorAll(".camasir_cards");
+const noResult = document.getElementById("no-result");
 function iconClicked(){
   document.getElementById('contact-info').classList.add('active');
   info.scrollIntoView({ behavior: 'smooth', block: 'end' });
@@ -97,6 +101,7 @@ function showCamasir(){
     brands.classList.add("hidden");
     koseResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
+    resetFilters();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function resetView(){
@@ -133,6 +138,7 @@ function showBulasik(){
     brands.classList.add("hidden");
     koseResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
+    resetFilters();
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showKurutma(){
@@ -254,35 +260,39 @@ function showAyakkabilikResim(){
     ayakkabilikResim.style.display = "flex";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
-document.addEventListener("DOMContentLoaded", function () {
-    const searchBar = document.getElementById("search-bar");
-    const filterCapacity = document.getElementById("filter-capacity");
-    const productCards = document.querySelectorAll(".camasir_cards");
-    const noResult = document.getElementById("no-result");
+function filterProducts() {
+    const searchValue = searchBar.value.toLowerCase();
+    const selectedCapacity = filterCapacity.value;
+    let hasResults = false;
 
-    function filterProducts() {
-        const searchValue = searchBar.value.toLowerCase();
-        const selectedCapacity = filterCapacity.value;
-        let hasResults = false;
-    
-        productCards.forEach(card => {
-            const productName = card.querySelector("h3").innerText.toLowerCase();
-            const productCapacity = productName.match(/\d+ kg/i)?.[0]?.split(" ")[0];
-    
-            if (
-                (productName.includes(searchValue) || searchValue === "") &&
-                (selectedCapacity === "all" || productCapacity === selectedCapacity)
-            ) {
-                card.style.display = "flex"; /* Görünür kart */
-                hasResults = true;
-            } else {
-                card.style.display = "none"; /* Gizli kart */
-            }
-        });
-    
-        noResult.style.display = hasResults ? "none" : "block";
-    }
+    productCards.forEach(card => {
+        const productName = card.querySelector('h3').innerText.toLowerCase();
+        const productCapacity = productName.match(/\d+ kg/i)?.[0]?.split(' ')[0];
 
-    searchBar.addEventListener("input", filterProducts);
-    filterCapacity.addEventListener("change", filterProducts);
-});
+        if (
+            (productName.includes(searchValue) || searchValue === '') &&
+            (selectedCapacity === 'all' || productCapacity === selectedCapacity)
+        ) {
+            card.style.display = 'flex';
+            hasResults = true;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    noResult.style.display = hasResults ? 'none' : 'block';
+}
+
+function resetFilters() {
+    searchBar.value = '';
+    filterCapacity.value = 'all';
+    productCards.forEach(card => {
+        card.style.display = 'flex';
+    });
+    noResult.style.display = 'none';
+}
+
+// Etkinlik dinleyiciler
+searchBar.addEventListener('input', filterProducts);
+filterCapacity.addEventListener('change', filterProducts);
+
