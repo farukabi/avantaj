@@ -247,11 +247,11 @@
         </div>
         <div id="no-result" style="display: none; text-align: center; font-size: 1.2rem; color: red;">Sonuç Bulunamadı!</div>
         
-        <div  class="camasir_cards" style="width: 350px;">
+        <div  class="camasir_cards" data-capacity="10" style="width: 350px;">
             <img class="camasir_image" src="img/camasir1.png" alt="">
             <h3 style="text-align: center;">ALTUS AL10123 D 10 Kg Çamaşır Makinesi </h3>
         </div>
-        <div  style="margin-left: 15px; width: 350px;" class="camasir_cards" >
+        <div  style="margin-left: 15px; width: 350px;"data-capacity="9" class="camasir_cards" >
             <img class="camasir_image" src="img/camasir2.png" alt="">
             <h3 style="text-align: center;">ALTUS AL9103 D 9 Kg Çamaşır Makinesi</h3>
             <p class="color-title">Renk Seçenekleri</p>
@@ -260,11 +260,11 @@
                 <span class="color-circle gray" title="Gri"></span>
             </div>
         </div>
-        <div  style="margin-left: 15px; width: 350px;" class="camasir_cards" >
+        <div  style="margin-left: 15px; width: 350px;" data-capacity="8"class="camasir_cards" >
             <img class="camasir_image" src="img/camasir2.png" alt="">
             <h3 style="text-align: center;">ALTUS AL8103 D 8 Kg Çamaşır Makinesi</h3>
         </div>
-        <div  style="margin-left: 15px; width: 350px;" class="camasir_cards" >
+        <div  style="margin-left: 15px; width: 350px;" data-capacity="7" class="camasir_cards" >
             <img class="camasir_image" src="img/camasir2.png" alt="">
             <h3 style="text-align: center;">ALTUS AL7103 D 7 Kg Çamaşır Makinesi</h3>
             <p class="color-title">Renk Seçenekleri</p>
@@ -273,17 +273,27 @@
                 <span class="color-circle gray" title="Gri"></span>
             </div>
         </div>
-        <div  style="margin-left: 15px; width: 350px;" class="camasir_cards" >
+        <div  style="margin-left: 15px; width: 350px;" data-capacity="6"class="camasir_cards" >
             <img class="camasir_image" src="img/camasir3.png" alt="">
             <h3 style="text-align: center;">ALTUS AL6103 L 6 Kg Çamaşır Makinesi</h3>
         </div>
-        <div  style="margin-left: 15px; width: 350px;" class="camasir_cards" >
+        <div  style="margin-left: 15px; width: 350px;"data-capacity="5" class="camasir_cards" >
             <img class="camasir_image" src="img/camasir4.png" alt="">
             <h3 style="text-align: center;">ALTUS AL5806 ML 5 Kg Çamaşır Makinesi</h3>
         </div>
     </div>
     <div id="bulasik" class="bulasik">
-        <div class="bulasik_cards">
+        <div class="filter-search-container">
+            <input type="text" id="bulasik-search-bar" placeholder="Ürün Ara..." />
+            <select id="program-filter">
+                <option value="all">Tüm Programlar</option>
+                <option value="3">3 Program</option>
+                <option value="4">4 Program</option>
+                <option value="5">5 Program</option>
+            </select>
+        </div>
+        <div id="no-result-bulasik" style="display: none; text-align: center; font-size: 1.2rem; color: red;">Sonuç Bulunamadı!</div>
+        <div class="bulasik_cards" data-program="3">
             <img class="bulasik_image" src="https://cdn.akakce.com/altus/altus-al-413-a-3-programli-z.jpg" alt="">
             <h3>Altus AL 413 3 Program Bulaşık Makinesi</h3>
             <p class="color-title">Renk Seçenekleri</p>
@@ -292,7 +302,7 @@
                 <span class="color-circle silver" title="Silver"></span>
             </div>
         </div>
-        <div class="bulasik_cards">
+        <div class="bulasik_cards" data-program="4">
             <img class="bulasik_image" src="img/bulasik2.png" alt="">
             <h3>Altus AL 434 4 Program Bulaşık Makinesi</h3>
             <p class="color-title">Renk Seçenekleri</p>
@@ -302,7 +312,7 @@
                 <span class="color-circle silver" title="Silver"></span>
             </div>
         </div>
-        <div class="bulasik_cards">
+        <div class="bulasik_cards" data-program="5">
             <img class="bulasik_image" src="img/bulasik1.png" alt="">
             <h3>Altus AL 445 NX 5 Program Bulaşık Makinesi</h3>
             <p class="color-title">Renk Seçenekleri</p>
@@ -313,6 +323,7 @@
             </div>
         </div>
     </div>
+    
     <div id="kurutma" class="kurutma">
         <div class="kurutma_cards">
             <img class="kurutma_image" src="img/kurutma1.png" alt="">
