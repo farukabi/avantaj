@@ -24,6 +24,7 @@ const bulasikSearchBar = document.getElementById("bulasik-search-bar");
 const programFilter = document.getElementById("program-filter");
 const bulasikCards = document.querySelectorAll(".bulasik_cards");
 const noResultBulasik = document.getElementById("no-result-bulasik");
+const tvResim = document.getElementById("galleryTv");
 
 function iconClicked(){
   document.getElementById('contact-info').classList.add('active');
@@ -65,6 +66,7 @@ function showHakkimizda(){
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
+    tvResim.style.display = "none";
     koseResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -86,6 +88,7 @@ function showBuzdolabi() {
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
     koseResim.style.display = "none";
+    tvResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -105,6 +108,7 @@ function showCamasir(){
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
     koseResim.style.display = "none";
+    tvResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
     resetFilters();
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -123,6 +127,7 @@ function resetView(){
     yatakResim.style.display = "none";
     dolapResim.style.display = "none";
     brands.classList.remove("hidden");
+    tvResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
@@ -142,6 +147,7 @@ function showBulasik(){
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
     koseResim.style.display = "none";
+    tvResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
     resetBulasikFilters();
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -163,6 +169,7 @@ function showKurutma(){
     brands.classList.add("hidden");
     koseResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
+    tvResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showMobilyaResim(){
@@ -183,6 +190,7 @@ function showMobilyaResim(){
     brands.classList.add("hidden");
     koseResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
+    tvResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showMobilyaKoseResim(){
@@ -203,6 +211,7 @@ function showMobilyaKoseResim(){
     dolapResim.style.display = "none";
     brands.classList.add("hidden");
     ayakkabilikResim.style.display = "none";
+    tvResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showYatakResim(){
@@ -223,6 +232,7 @@ function showYatakResim(){
     brands.classList.add("hidden");
     koseResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
+    tvResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showDolapResim(){
@@ -243,6 +253,7 @@ function showDolapResim(){
     brands.classList.add("hidden");
     koseResim.style.display = "none";
     ayakkabilikResim.style.display = "none";
+    tvResim.style.display = "none";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function showAyakkabilikResim(){
@@ -263,6 +274,28 @@ function showAyakkabilikResim(){
     brands.classList.add("hidden");
     koseResim.style.display = "none";
     ayakkabilikResim.style.display = "flex";
+    tvResim.style.display = "none";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function showTvResim(){
+    bulasikMak.style.display = "none";
+    categoriesBar.classList.add('hidden');
+    subcategoriesBar.classList.add('hidden');
+    subcategoriesBarMobilya.classList.add("hidden");
+    mainImage.classList.add('hidden');
+    subeler.classList.add("hidden");
+    camasirMakineleri.style.display = "none";
+    buzdolabiSection.style.display = 'none'; 
+    hakkimizda.style.display = "none";
+    galery.classList.add('hidden');
+    kurutmalik.style.display = "none";
+    mobilyaResim.style.display = "none";
+    yatakResim.style.display = "none";
+    dolapResim.style.display = "none";
+    brands.classList.add("hidden");
+    koseResim.style.display = "none";
+    ayakkabilikResim.style.display = "none";
+    tvResim.style.display = "flex";
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 function filterProducts() {
