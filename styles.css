@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -662,4 +663,54 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     cursor: pointer;
+}
+.contact-box {
+    text-align: center;
+    background: linear-gradient(135deg, #ff4e50, #f9d423); /* Kırmızı-turuncu geçiş */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.contact-text {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.contact-highlight {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); }
+    100% { text-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+}
+
+.contact-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: white;
+    color: #ff4e50;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-button:hover {
+    background: #f9d423;
+    color: white;
+    transform: scale(1.1);
 }
